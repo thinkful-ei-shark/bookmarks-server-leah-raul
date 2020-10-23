@@ -50,7 +50,7 @@ bookmarksRouter
     const { id } = req.params;
 
     console.log('inside get id');
-    const bookmark = bookmarks.find((bookmark) => bookmark.id == id);
+    const bookmark = bookmarks.find((bookmark) => bookmark.id === id);
     console.log(id);
     console.log(bookmark);
 
@@ -64,7 +64,7 @@ bookmarksRouter
   .delete((req, res) => {
     const { id } = req.params;
 
-    const bookmarkIndex = bookmarks.findIndex((bookmark) => bookmark.id == id);
+    const bookmarkIndex = bookmarks.findIndex((bookmark) => bookmark.id === id);
 
     console.log(bookmarkIndex, id, bookmarks[3]);
 
