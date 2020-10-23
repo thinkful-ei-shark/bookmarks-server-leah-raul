@@ -5,6 +5,7 @@ const cors = require('cors');
 const helmet = require('helmet');
 const { NODE_ENV } = require('./config');
 const apiKey = require('./apiKey');
+const bookmarksRouter = require('./bookmarksRoute');
 
 const app = express();
 
@@ -21,6 +22,8 @@ app.use(apiKey);
 app.get('/', (req, res) => {
   res.send('Hello, world!');
 });
+
+app.use(bookmarksRouter);
 
 // error handler middleware
 
